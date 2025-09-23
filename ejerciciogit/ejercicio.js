@@ -3,5 +3,5 @@ saludar=function(){
     let cmpimagen
     let imagen
     cmpimagen=document.getElementById("img");
-cmpimagen.src="./imagen/giphy.gif"
+    cmpimagen.src="./imagen/giphy.gif"
 }
