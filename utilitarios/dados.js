@@ -1,13 +1,11 @@
 jugar=function(){
     let aleatorio
     aleatorio=lanzarDado();
-    cambiarTexto("lblNumero",aleatorio)
+    mostrarTexto("lblNumero",aleatorio)
     if(aleatorio>3){
-        console.log("ES MAYOR A 3")
-        console.log("GANASTE")
+        mostrarTexto("ldlsesulta","El numero es mayor a 3: GANASTE")
     }else{
-        console.log("ES menor A 3")
-        console.log("PERDISTE")
+        mostrarTexto("ldlsesulta","El numero es menor a 3: PERDISTE")
     }
 }
 
