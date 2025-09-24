@@ -4,9 +4,9 @@ calcularValordescuento=function(monto,porcentajeDescuento){
     return descuento;
 }
 
-calcularIva=function(monto,descuento){
+calcularIva=function(monto){
     let IVA
-    IVA=(monto-descuento)*(12/100);
+    IVA=(monto)*(12/100);
     return IVA;
 }
 
