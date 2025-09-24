@@ -5,6 +5,15 @@ saludar = function(){
     let Estatura=recuperarFloat("txtEstatura");
     let bienvenidos="Bienvenido "+nombre+" "+apellido;
     mostrarTexto("result",bienvenidos);
+    mostrarImagen("ldlimg","./imagen/7NcB.gif")
+    mostrarTextoEnCaja("txtNombre","")
+
+}
+
+mostrarImagen = function (idComponente, rutaImagen) {
+    let componente;
+    componente = document.getElementById(idComponente);
+    componente.src = rutaImagen;
 }
 
 recuperarTexto = function (idComponente) {
@@ -31,4 +40,10 @@ mostrarTexto = function (idComponente, mensaje) {
     let componente;
     componente = document.getElementById(idComponente);
     componente.innerText = mensaje;
+}
+
+mostrarTextoEnCaja = function (idComponente, mensaje) {
+    let componente;
+    componente = document.getElementById(idComponente);
+    componente.value = mensaje;
 }
