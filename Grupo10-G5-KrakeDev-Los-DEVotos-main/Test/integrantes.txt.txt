@@ -1,0 +1,16 @@
+Grupo 10 Los DEVotos
+
+*Integrante 1
+-Nombre: Fernando Gabriel Ponce Lara
+-Hobby: Tocar Guitarra
+-Nombre de GitHub: data-Fernando
+*Integrante 2
+-Nombre: Luis David Flores Hurtado 
+-Hobby: Jugar videojuegos 
+-Nombre de GitHub: LUIS-DAVID-04
+*Integrante 3
+-Nombre: Juan Carlos Villarreal Paspuel 
+-Hobby: Pendiente 
+-Nombre de GitHub: Juankavp2007
+
+
