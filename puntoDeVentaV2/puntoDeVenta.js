@@ -27,9 +27,9 @@ calcularValorTotal = function () {
     subfloat=parseFloat(valorSubtotal)
     mostrarTexto("lblSubt",valorSubtotal);
 
-    valorDescuento=calcularDescuentoPorVolumen(valorSubtotal,porcentajeDescuento);
+    valorDescuento=calcularDescuentoPorVolumen(valorSubtotal,cantidad);
     descufloat=parseFloat(valorDescuento)
-    mostrarTexto("lblDescu",descufloat)
+    mostrarTexto("lblDescu",descufloat.toFixed(2))
     
     valorIVA=calcularIva(valorSubtotal,valorDescuento)
     let decimal=valorIVA.toFixed(3);

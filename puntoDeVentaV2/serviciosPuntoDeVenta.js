@@ -23,15 +23,17 @@ calcularTotal=function(subtotal,descuento,IVA){
 }
 
 calcularDescuentoPorVolumen=function(Subtotal,Cantidad){
- let cmpdescuento=Subtotal*Cantidad;
+ let cmpdescuento;
+ let cmpDescuentos;
  if(Cantidad<3){
-    mostrarTexto("lblDescu","0.0")
+    cmpDescuentos=0
  }else if(Cantidad>=3 && Cantidad<=5){
-    Cantidad=0.03
+    cmpDescuentos=0.03
  }else if(Cantidad>=6 && Cantidad<=11){
-    Cantidad=0.04
+    cmpDescuentos=0.04
  }else if(Cantidad>=12){
-    Cantidad=0.05
+    cmpDescuentos=0.05
  }
+ cmpdescuento=Subtotal*cmpDescuentos
  return cmpdescuento
 }
