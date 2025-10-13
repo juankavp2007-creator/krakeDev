@@ -71,7 +71,7 @@ calcular = function () {
     let nota3;
     let resultado;
     let resultadoFormato;
-    let existeError=false;
+    
     nota1 = recuperarFloat("txtNota1");
     esNotaValida(nota1,"lblError1");
     

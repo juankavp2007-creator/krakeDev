@@ -12,18 +12,33 @@ calcularValorTotal = function () {
     let valorDescuento;
     let valorIVA;
     let valorTotal;
+    let hayErroresr=false
+    let nomProduct;
+
 
     nombreProducto=recuperarTexto("txtNota1")
+    nomProduct=nombreProducto.length;
+
+    if(nombreProducto==""){
+        mostrarTexto("lblError1","CAMPO OBLIGATORIO");
+        hayErroresr=true;
+    }if(nomProduct>10){
+        mostrarTexto("lblError1","Has excedido el limete de caracteres");
+        hayErrores=true;
+    }else{
+        mostrarTexto("lblError1","")
+    }
+    
 
     cantidad=recuperarInt("txtNota2")
-   
+    esNotaValida(cantidad,"lblError2");
 
     precioProducto=recuperarFloat("txtNota3")
+    esNotaValida(precioProducto,"lblError3");
     
     
-    
-
-    valorSubtotal=calcularSubtotal(precioProducto,cantidad);
+    if(hayErroresr==false && esNotaValida(cantidad,"lblError2") && esNotaValida(precioProducto,"lblError3")){
+        valorSubtotal=calcularSubtotal(precioProducto,cantidad);
     subfloat=parseFloat(valorSubtotal)
     mostrarTexto("lblSubt",valorSubtotal);
 
@@ -39,8 +54,45 @@ calcularValorTotal = function () {
     let decima=valorTotal.toFixed(3);
     mostrarTexto("lbltolal",decima)
 
- 
+    }else{
+        mostrarTexto("lblSubt","0.0")
+        mostrarTexto("lblDescu","0.0")
+        mostrarTexto("lblivas","0.0")
+        mostrarTexto("lbltolal","0.0")
+    }
+}
 
+esNotaValida=function(valor,idComponente){
+    let hayErrores=false
+    let cmppValor= valor.length;
+
+    if(isNaN(valor)){
+        mostrarTexto(idComponente,"CAMPO OBLIGATORIO");
+        hayErrores=true;
+    }
+
+
+    if(cmppValor>10){
+        mostrarTexto(idComponente,"Has excedido el limete de caracteres");
+        hayErrores=true;
+    }
+
+    if(valor<=0 || valor>=100){
+        mostrarTexto(idComponente,"Cantidad fuera del rango")
+        hayErrores=true;
+    }
+
+    if(valor<=0 || valor>=50){
+        mostrarTexto(idComponente,"Precio fuera del rango")
+        hayErrores=true;
+    }
+
+    if(hayErrores==false){
+            mostrarTexto(idComponente,"");
+    }
+
+    return !hayErrores;
+}
 
     //4. Invocar a calcularSubtotal y el retorno guardar en la variable valorSubtotal
     // Tomar en cuenta el orden de como pasa los parametos de la funcion y colocar bien
@@ -107,7 +159,6 @@ calcularValorTotal = function () {
         Si funciona, hacer un commit
     */
 
-}
 limpiar = function () {
     let nom=document.getElementById("txtProducto");
     nom.value="0"
