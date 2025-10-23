@@ -85,7 +85,7 @@ validarEstructura = function (placa, idComponente) {
         Nam3 = esDigito(cmpNam3)
         if (Nam3 == false) {
             existenErrores = true
-            mostrarTexto(idComponente, "DEBE SER UN NUMERO ")
+            mostrarTexto(idComponente, "ESTRUCTURA INCORRECTA PARA EL PICO Y PLACA ")
         }
     }
 
@@ -94,7 +94,7 @@ validarEstructura = function (placa, idComponente) {
         Nam4 = esDigito(cmpNam4)
         if (Nam4 == false) {
             existenErrores = true
-            mostrarTexto(idComponente, "DEBE SER UN NUMERO ")
+            mostrarTexto(idComponente, "ESTRUCTURA INCORRECTA PARA EL PICO Y PLACA ")
         }
     }
     return existenErrores
