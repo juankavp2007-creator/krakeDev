@@ -23,7 +23,7 @@ validarPassword = function (password) {
 
     if (longCadena<=16 && longCadena>=8) {
 
-        for(i=0;i<=longitudCadena;i++) {
+        for(i=0;i<=longCadena;i++) {
             caracter = password.charAt(i)
             console.log("analizando caracter: " + caracter + " en posicion :" + i)
 
@@ -40,15 +40,15 @@ validarPassword = function (password) {
 
         }
 
-        console.log("resultado: "+almenosUnCaracter+" "+almenosUnDigito+" "+almenosUnaMayuscula)
+        console.log("resultado: "+UnCaracter+" "+UnDigito+" "+UnaMayuscula)
 
-        if (almenosUnCaracter == false) {
+        if (UnCaracter == false) {
             mensajeError += " debe de haber al menos un caracter especial ";
         }
-        if (almenosUnDigito == false) {
+        if (UnDigito == false) {
             mensajeError += " debe de haber al menos un dígito ";
         }
-        if (almenosUnaMayuscula == false) {
+        if (UnaMayuscula == false) {
             mensajeError += " debe de haber al menos una letra mayúscula ";
         }
 
