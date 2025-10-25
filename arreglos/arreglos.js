@@ -17,8 +17,6 @@ agregarNota=function(nota){
 
 probarAgregar=function(){
     let notarecuperada=recuperarTexto("txtNota")
-    // sale error por que se llama funcion con el . , no es necesario
-    // notas.agregarNota(notarecuperada)
     agregarNota(notarecuperada)
     console.log("arreglo: "+notas)
 
